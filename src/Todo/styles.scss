@@ -1,0 +1,124 @@
+// TodoList
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.todo-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fd8368;
+}
+.todoApp {
+    width: 550px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
+}
+
+.filter-todo {
+    border-top: 1px solid #ddd;
+    padding: 12px;
+    & button {
+        background-color: #fff;
+        border: solid 1px transparent;
+        padding: 2px 4px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0 4px;
+        &.selected {
+            border-color: #ddd;
+        }
+    }
+}
+
+.filter-todo button:nth-child(1):hover{
+    border-color: #ddd;
+}
+.filter-todo button:nth-child(2):hover{
+    border-color: #ddd;
+}
+.filter-todo button:nth-child(3):hover {
+    border-color: #ddd;
+}
+.filter-todo button:nth-child(4):hover {
+    border-color: #ddd;
+}
+
+// Todo
+.todo-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border-top: 1px solid #ddd;
+    padding: 16px;
+    position: relative;
+
+    & > .todo-item {
+        pointer-events: none;
+        font-size: 24px;
+    }
+    & > .completed {
+        color: #d9d9d9;
+        text-decoration: line-through;
+    }
+
+    .delete-todo, .edit-todo {
+        padding-top: 4px;
+        font-size: 16px;
+        right: 16px;
+        position: absolute;
+    }
+
+    .edit-todo {
+        right: 40px;
+        font-size: 20px;
+    }
+
+    .iconCheck {
+        margin-top: 4px;
+        padding-right: 16px;
+    }
+
+    .checked {
+        display: none;
+        color: green;
+    }
+
+    .unCheck {
+        padding-top: 4px;
+    }
+    .active .checked {
+        display: block;
+    }
+
+    .active .unCheck {
+        display: none;
+    }
+}
+
+
+// TodoForm
+.formTodo {
+    display: flex;
+}
+
+.inputTodo {
+    border: none;
+    font-size: 24px;
+    padding: 16px;
+    padding-left: 48px;
+    margin-top: 6px;
+    width: 500px;
+}
+
+input::placeholder {
+    font-size: 28px;
+    font-style: italic;
+    opacity: 0.4;
+}
+
+.inputTodo:focus-visible {
+    outline: none;
+}
